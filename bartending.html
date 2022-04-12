@@ -1,0 +1,70 @@
+<!DOCTYPE html >
+<html>
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   <link rel="stylesheet" href="assets/css/styles.css">
+   <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+   <style>
+      body{
+         background-image: url(assets/img/bartendingicon.jpg);
+         margin: 30px;
+      }
+   </style>
+   
+   <title>Bartending</title>
+</head>
+   <body>
+      <header class="l-header">
+         <nav class="nav bd-grid">
+             <div>
+               <a onclick="goBack()" class="nav__logo">Back</a>
+             </div>
+         </nav>
+   </header>
+
+   <div class="slidingphotos">
+      <img class="mySlides" src="assets/img/bartender1.jpg" style="width:100%">
+      <img class="mySlides" src="assets/img/bartender2.jpg" style="width:100%">
+      <img class="mySlides" src="assets/img/bartender3.jpg" style="width:100%">
+    </div>
+
+    <div class="paragraph">Bartending was my first paid job. In Struga, I worked at a coffee and restaurant for the summer.<br>
+   I developed excellent communication skills and improved my Albanian with the workers and my English with the tourists.<br>
+   It also improved my teamwork abilities and, most importantly, my ability to work under pressure.<br>
+   Because of my bartending experience, I am able to work calmly under pressure.</div>
+    
+   <script>
+   var myIndex = 0;
+          carousel();
+
+   function carousel() {
+   var i;
+   var x = document.getElementsByClassName("mySlides");
+   for (i = 0; i < x.length; i++) {
+      x[i].style.display = "none";  
+   }
+   myIndex++;
+   if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 5000);
+}
+
+function goBack() {
+           window.history.back();
+         }
+</script>
+
+   <footer class="footer">
+      <div class="footer__social">
+          <a href="https://www.facebook.com/berkay.bayraktar.501/" target="_blank" class="footer__icon"><i class='bx bxl-facebook' ></i></a>
+          <a href="https://www.instagram.com/bberkayo/" target="_blank" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
+          <a href="mailto:b.bayraktar13@gmail.com" target="_blank" class="footer__icon"><i class='bx bx-mail-send'></i></a>
+      </div>
+      <p>&#169; 2021 copyright all right reserved</p>
+  </footer>
+
+
+   </body>
+</html>
